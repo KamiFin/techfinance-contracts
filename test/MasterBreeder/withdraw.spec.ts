@@ -12,7 +12,7 @@ chai.use(solidity)
 
 const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
 
-// Viper token locks
+// TFI token locks
 const LOCK_FROM_BLOCK = 250
 const LOCK_TO_BLOCK = 500
 

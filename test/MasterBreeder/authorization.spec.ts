@@ -26,11 +26,11 @@ describe('MasterBreeder::Authorization', () => {
   
   beforeEach(async () => {
     govToken = await deployGovernanceToken(alice)
-    // 1000 VIPER per block, rewards start at block 0, rewards are halved after every 45360 blocks
+    // 1000 TFI per block, rewards start at block 0, rewards are halved after every 45360 blocks
     breeder = await deployMasterBreeder(wallets, govToken, REWARDS_PER_BLOCK, REWARDS_START_BLOCK, HALVING_AFTER_BLOCK_COUNT)
   })
 
-  it("should allow the owner to reclaim ownership of the Viper token", async function () {
+  it("should allow the owner to reclaim ownership of the TechFi token", async function () {
     expect(await govToken.transferOwnership(breeder.address))
 
     expect(await govToken.owner()).to.be.equal(breeder.address)
@@ -42,7 +42,7 @@ describe('MasterBreeder::Authorization', () => {
     expect(await govToken.owner()).to.be.equal(alice.address)
   })
 
-  it("should allow authorized users to reclaim ownership of the Viper token", async function () {
+  it("should allow authorized users to reclaim ownership of the TechFi token", async function () {
     await breeder.addAuthorized(bob.address)
 
     expect(await govToken.transferOwnership(breeder.address))

@@ -38,7 +38,7 @@ describe('MasterBreeder::Pools', () => {
   })
 
   it("should be able to add a pool", async function () {
-    // 1 VIPER per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
+    // 1 TFI per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
     const rewardsPerBlock = 1
     const rewardsStartAtBlock = 100
     const breeder = await deployMasterBreeder(wallets, govToken, expandTo18Decimals(rewardsPerBlock), rewardsStartAtBlock, 1000)
@@ -52,7 +52,7 @@ describe('MasterBreeder::Pools', () => {
   })
 
   it("should not be able to add the same pool twice", async function () {
-    // 1 VIPER per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
+    // 1 TFI per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
     const rewardsPerBlock = 1
     const rewardsStartAtBlock = 100
     const breeder = await deployMasterBreeder(wallets, govToken, expandTo18Decimals(rewardsPerBlock), rewardsStartAtBlock, 1000)
@@ -68,7 +68,7 @@ describe('MasterBreeder::Pools', () => {
   })
 
   it("should not be able to add a pool as an unauthorized user", async function () {
-    // 1 VIPER per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
+    // 1 TFI per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
     const rewardsPerBlock = 1
     const rewardsStartAtBlock = 100
     const breeder = await deployMasterBreeder(wallets, govToken, expandTo18Decimals(rewardsPerBlock), rewardsStartAtBlock, 1000)
@@ -81,7 +81,7 @@ describe('MasterBreeder::Pools', () => {
   })
 
   it("should be able to add multiple pools", async function () {
-    // 1 VIPER per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
+    // 1 TFI per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
     const rewardsPerBlock = 1
     const rewardsStartAtBlock = 100
     const breeder = await deployMasterBreeder(wallets, govToken, expandTo18Decimals(rewardsPerBlock), rewardsStartAtBlock, 1000)
@@ -98,7 +98,7 @@ describe('MasterBreeder::Pools', () => {
   })
 
   it("should be able to change the allocation points for a given pool", async function () {
-    // 1 VIPER per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
+    // 1 TFI per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
     const rewardsPerBlock = 1
     const rewardsStartAtBlock = 100
     const breeder = await deployMasterBreeder(wallets, govToken, expandTo18Decimals(rewardsPerBlock), rewardsStartAtBlock, 1000)
@@ -115,7 +115,7 @@ describe('MasterBreeder::Pools', () => {
   })
 
   it("should not be able to change the allocation points for a given pool as an unauthorized user", async function () {
-    // 1 VIPER per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
+    // 1 TFI per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
     const rewardsPerBlock = 1
     const rewardsStartAtBlock = 100
     const breeder = await deployMasterBreeder(wallets, govToken, expandTo18Decimals(rewardsPerBlock), rewardsStartAtBlock, 1000)

@@ -44,7 +44,7 @@ describe('MasterBreeder::Fees', () => {
   })
 
   it("should be able to set deposit fees to zero", async function () {
-    // 1 VIPER per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
+    // 1 TFI per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
     const rewardsPerBlock = 1
     const rewardsStartAtBlock = 100
     const breeder = await deployMasterBreeder(wallets, govToken, expandTo18Decimals(rewardsPerBlock), rewardsStartAtBlock, 1000)
@@ -61,7 +61,7 @@ describe('MasterBreeder::Fees', () => {
   })
 
   it("should charge a deposit fee when deposit fees are set to default values", async function () {
-    // 1 VIPER per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
+    // 1 TFI per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
     const rewardsPerBlock = 1
     const rewardsStartAtBlock = 100
     const breeder = await deployMasterBreeder(wallets, govToken, expandTo18Decimals(rewardsPerBlock), rewardsStartAtBlock, 1000)
@@ -95,7 +95,7 @@ describe('MasterBreeder::Fees', () => {
   })
 
   it("shouldn't charge a deposit fee when deposit fees have been set to zero", async function () {
-    // 1 VIPER per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
+    // 1 TFI per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
     const rewardsPerBlock = 1
     const rewardsStartAtBlock = 100
     const breeder = await deployMasterBreeder(wallets, govToken, expandTo18Decimals(rewardsPerBlock), rewardsStartAtBlock, 1000)

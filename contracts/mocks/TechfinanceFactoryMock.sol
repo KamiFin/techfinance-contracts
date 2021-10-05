@@ -2,8 +2,8 @@
 
 pragma solidity 0.6.12;
 
-import "@venomswap/core/contracts/UniswapV2Factory.sol";
+import "@techfinance/core/contracts/UniswapV2Factory.sol";
 
-contract VenomSwapFactoryMock is UniswapV2Factory {
+contract TechFinanceFactoryMock is UniswapV2Factory {
     constructor(address _feeToSetter) public UniswapV2Factory(_feeToSetter) {}
 }

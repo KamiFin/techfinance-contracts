@@ -33,7 +33,7 @@ describe('MasterBreeder::Referrals', () => {
     await lp.transfer(bob.address, expandTo18Decimals(1000))
     await lp.transfer(carol.address, expandTo18Decimals(1000))
 
-    // 1 VIPER per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
+    // 1 TFI per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
     const rewardsPerBlock = 1
     const rewardsStartAtBlock = 100
     breeder = await deployMasterBreeder(wallets, govToken, expandTo18Decimals(rewardsPerBlock), rewardsStartAtBlock, 1000)

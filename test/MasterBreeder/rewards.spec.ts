@@ -13,7 +13,7 @@ chai.use(solidity)
 
 const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
 
-// Viper token locks
+// TFI token locks
 const LOCK_FROM_BLOCK = 250
 const LOCK_TO_BLOCK = 500
 
@@ -56,8 +56,8 @@ describe('MasterBreeder::Rewards', () => {
       await lp2.transfer(carol.address, expandTo18Decimals(1000))
     })
 
-    it("should not pay out VIPER rewards before farming has started", async function () {
-      // 1 VIPER per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
+    it("should not pay out TFI rewards before farming has started", async function () {
+      // 1 TFI per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
       const rewardsPerBlock = 1
       const rewardsStartAtBlock = 100
       const breeder = await deployMasterBreeder(wallets, govToken, expandTo18Decimals(rewardsPerBlock), rewardsStartAtBlock, 1000)
@@ -84,11 +84,11 @@ describe('MasterBreeder::Rewards', () => {
       expect(await govToken.balanceOf(bob.address)).to.equal(expandTo18Decimals(0))
     })
 
-    it("should pay out VIPER rewards after farming has started", async function () {
+    it("should pay out TFI rewards after farming has started", async function () {
       this.timeout(0)
       const debugMessages = false
 
-      // 1 VIPER per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
+      // 1 TFI per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
       const rewardsPerBlock = 1
       const rewardsStartAtBlock = 100
       const rewardsMultiplierForSecondPool = 5
@@ -191,7 +191,7 @@ describe('MasterBreeder::Rewards', () => {
       this.timeout(0)
       const debugMessages = false
 
-      // 1 VIPER per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
+      // 1 TFI per block farming rate starting at block 100 with the first halvening block starting 1000 blocks after the start block
       const rewardsPerBlock = 1
       const rewardsStartAtBlock = 150
       const breeder = await deployMasterBreeder(wallets, govToken, expandTo18Decimals(rewardsPerBlock), rewardsStartAtBlock, 1000)
@@ -304,7 +304,7 @@ describe('MasterBreeder::Rewards', () => {
       expect(await govToken.totalLock()).to.eq('77824000000000000000')
     })
 
-    it("should not distribute VIPERs if no one deposit", async function () {
+    it("should not distribute TFIs if no one deposit", async function () {
       this.timeout(0)
       const debugMessages = false
       // 1 per block farming rate starting at block 600 with the first halvening block starting 1000 blocks after the start block
@@ -359,7 +359,7 @@ describe('MasterBreeder::Rewards', () => {
       expect(await lp.balanceOf(bob.address)).to.gte(likelyDeposit)
     })
 
-    it("should distribute VIPERs properly for each staker"), async () => {
+    it("should distribute TFIS properly for each staker"), async () => {
       // 1 per block farming rate starting at block 300 with the first halvening block starting 1000 blocks after the start block
       const rewardsPerBlock = 1
       const breeder = await deployMasterBreeder(wallets, govToken, expandTo18Decimals(rewardsPerBlock), 300, 1000)
@@ -422,7 +422,7 @@ describe('MasterBreeder::Rewards', () => {
       expect(await lp.balanceOf(carol.address)).to.equal(expandTo18Decimals(1000))
     }
 
-    it("should give proper VIPERs allocation to each pool"), async () => {
+    it("should give proper TFIs allocation to each pool"), async () => {
       // 100 per block farming rate starting at block 400 with the first halvening block starting 1000 blocks after the start block
       const rewardsPerBlock = 1
       const breeder = await deployMasterBreeder(wallets, govToken, expandTo18Decimals(rewardsPerBlock), 400, 1000)

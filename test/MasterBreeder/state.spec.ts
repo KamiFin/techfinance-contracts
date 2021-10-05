@@ -37,12 +37,12 @@ describe('MasterBreeder::State', () => {
     const lockToBlock = 20960714
     
     // This has been modified - contains two more multipliers (104 vs 102) compared to original Bao values.
-    // Multipliers have also been significantly modified to suit VIPER:s emission model
+    // Multipliers have also been significantly modified to suit TFI:s emission model
     const rewardMultipliers = [256,128,64,32,32,16,16,8,8,8,8,8,8,8,8,8,8,8,8,8,8,4,4,4,4,4,4,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2,2,4,4,4,8,8,8,8,8,16,16,16,16,16,16,16,16,16,16,8,8,8,8,8,8,4,4,2,2,1,1,1,1,1,1,2,2,4,4,4,4,8,8,8,8,8,16,16,32,32,32,32,16,8,4,2,1,1,1,1,2,2];
     const halvingAtBlocks: BigNumber[] = []
 
     beforeEach(async () => {
-      govToken = await deployContract(alice, GovernanceToken, ["Viper", "VIPER", TOTAL_CAP, MANUAL_MINT_LIMIT, lockFromBlock, lockToBlock])
+      govToken = await deployContract(alice, GovernanceToken, ["TechFi", "TFI", TOTAL_CAP, MANUAL_MINT_LIMIT, lockFromBlock, lockToBlock])
       breeder = await deployMasterBreeder(wallets, govToken, expandTo18Decimals(1000), rewardsStartBlock, halvingAfterBlockCount)
       await govToken.transferOwnership(breeder.address)
     })
@@ -146,12 +146,12 @@ describe('MasterBreeder::State', () => {
     const lockToBlock = 38538895
     
     // This has been modified - contains two more multipliers (104 vs 102) compared to original Bao values.
-    // Multipliers have also been significantly modified to suit VIPER:s emission model
+    // Multipliers have also been significantly modified to suit TFI:s emission model
     const rewardMultipliers = [256,128,64,32,32,16,16,8,8,8,8,8,8,8,8,8,8,8,8,8,8,4,4,4,4,4,4,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2,2,4,4,4,8,8,8,8,8,16,16,16,16,16,16,16,16,16,16,8,8,8,8,8,8,4,4,2,2,1,1,1,1,1,1,2,2,4,4,4,4,8,8,8,8,8,16,16,32,32,32,32,16,8,4,2,1,1,1,1,2,2]
     const halvingAtBlocks: BigNumber[] = []
 
     beforeEach(async () => {
-      govToken = await deployContract(alice, GovernanceToken, ["Viper", "VIPER", TOTAL_CAP, MANUAL_MINT_LIMIT, lockFromBlock, lockToBlock])
+      govToken = await deployContract(alice, GovernanceToken, ["TechFi", "TFI", TOTAL_CAP, MANUAL_MINT_LIMIT, lockFromBlock, lockToBlock])
       breeder = await deployMasterBreeder(wallets, govToken, expandTo18Decimals(1000), rewardsStartBlock, halvingAfterBlockCount)
       await govToken.transferOwnership(breeder.address)
     })

@@ -1,8 +1,8 @@
 {
-  "name": "@venomswap/contracts",
+  "name": "@techfinance/contracts",
   "version": "1.0.6",
   "license": "MIT",
-  "description": "Token, Liquidity Mining and Governance contracts for VenomSwap & the Venom Protocol",
+  "description": "Token, Liquidity Mining and Governance contracts for TechFinance",
   "files": [
     "contracts",
     "build"
@@ -10,19 +10,17 @@
   "author": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VenomProtocol/venomswap-contracts.git"
+    "url": "git+https://github.com/TechFinance/techfinance-contracts.git"
   },
   "bugs": {
-    "url": "https://github.com/VenomProtocol/venomswap-contracts/issues"
+    "url": "https://github.com/TechFinance/techfinance-contracts/issues"
   },
-  "homepage": "https://github.com/VenomProtocol/venomswap-contracts#readme",
+  "homepage": "https://github.com/TechFinance/techfinance-contracts#readme",
   "keywords": [
-    "venomprotocol",
-    "venomdao",
-    "venomswap",
+    "techfinance",
     "ethereum",
-    "binance smart chain",
-    "harmony"
+    "polygon",
+    "matic"
   ],
   "devDependencies": {
     "@types/chai": "^4.2.6",
